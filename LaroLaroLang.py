@@ -33,10 +33,6 @@ while guess != secret:
     else:
         print("Hmm... ulet ka")
         count += 1
-    if guess > secret:
-        print("Tip! Taas naman niyan, babaan moooo")
-    if guess < secret:
-        print("Tip! Baba naman niyaaaan, taassan mooo")
 
 print("Ito lang naman yung tries mo,", count, "!")
 
