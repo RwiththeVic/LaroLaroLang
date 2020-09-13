@@ -6,6 +6,7 @@ name = input()
 
 print(welcome + ' ' + name)
 # Number game lang ito
+while True:
 flag = True
 while flag:
     num: str = input("Magbigay ka ng kahit anong number: ")
