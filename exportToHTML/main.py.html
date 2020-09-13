@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">random</span>
+
+<span class="s1">welcome = </span><span class="s2">&quot;Hello&quot;</span>
+<span class="s1">print(</span><span class="s2">&quot;Pakilagay ang iyong name: &quot;</span><span class="s1">)</span>
+<span class="s1">name = input()</span>
+
+<span class="s1">print(welcome + </span><span class="s2">' ' </span><span class="s1">+ name)</span>
+<span class="s3"># Number game lang ito</span>
+<span class="s1">flag = </span><span class="s0">True</span>
+<span class="s0">while </span><span class="s1">flag:</span>
+    <span class="s1">num = input(</span><span class="s2">&quot;Magbigay ka ng kahit anong number: &quot;</span><span class="s1">)</span>
+
+    <span class="s0">if </span><span class="s1">num.isdigit():</span>
+        <span class="s1">print(</span><span class="s2">&quot;Okay, arat na!&quot;</span><span class="s1">)</span>
+        <span class="s1">num = int(num)</span>
+        <span class="s1">flag = </span><span class="s0">False</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s2">&quot;Number kase inde yan.... Ulitin natin&quot;</span><span class="s1">)</span>
+
+<span class="s1">secret = random.randint(</span><span class="s4">1</span><span class="s0">, </span><span class="s1">num)</span>
+
+<span class="s1">guess = </span><span class="s0">None</span>
+<span class="s1">count = </span><span class="s4">1</span>
+
+<span class="s0">while </span><span class="s1">guess != secret:</span>
+    <span class="s1">guess = input(</span><span class="s2">&quot;Okay, magbigay ka ng digits jk. number between 1 &amp; &quot; </span><span class="s1">+ str(num) + </span><span class="s2">&quot;:&quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">guess.isdigit():</span>
+        <span class="s1">guess = int(guess)</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s2">&quot;digittt inde letter or ano paaaaaaa&quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">guess == secret:</span>
+        <span class="s1">print(</span><span class="s2">&quot;Yown tumpak mo&quot;</span><span class="s1">)</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s2">&quot;Hmm... ulet ka&quot;</span><span class="s1">)</span>
+        <span class="s1">count += </span><span class="s4">1</span>
+    <span class="s0">if </span><span class="s1">guess &gt; secret:</span>
+        <span class="s1">print(</span><span class="s2">&quot;Tip! Taas naman niyan, babaan moooo&quot;</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">guess &lt; secret:</span>
+        <span class="s1">print(</span><span class="s2">&quot;Tip! Baba naman niyaaaan, taassan mooo&quot;</span><span class="s1">)</span>
+
+<span class="s1">print(</span><span class="s2">&quot;Ito lang naman yung tries mo,&quot;</span><span class="s0">, </span><span class="s1">count</span><span class="s0">, </span><span class="s2">&quot;!&quot;</span><span class="s1">)</span>
+</pre>
+</body>
+</html>
